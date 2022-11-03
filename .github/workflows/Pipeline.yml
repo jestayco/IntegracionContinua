@@ -2,8 +2,8 @@ name: Pipeline Aplication
 
 on:
   push:
-    branches: #Ramas de push
-      - main #["main"]
+    branches: #Ramas
+      - main
 
 jobs:
   build:
@@ -20,9 +20,6 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    
-    - name: ls
-      run: ls
 
     - name: Install Dependencies
       run: |
