@@ -49,7 +49,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
         SCRIPT: |
-          git pull origin main
+          ls
 
 #Hola
   # deploy:
