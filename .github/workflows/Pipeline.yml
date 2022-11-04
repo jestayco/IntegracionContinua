@@ -49,10 +49,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
         SCRIPT: |
-          cd IntegracionContinua/
           git pull origin main
 
-
+#Hola
   # deploy:
   #   name: Deploy to EC2 on master branch push
   #   runs-on: ubuntu-latest
