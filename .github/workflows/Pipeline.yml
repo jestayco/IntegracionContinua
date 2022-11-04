@@ -44,9 +44,6 @@ jobs:
         PORT: ${{ secrets.PORT }}
         USERNAME: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        target: ${{ secrets.TARGET }}
-        source: "./dist/*"
-        strip_components: 1
 
   # deploy:
   #   name: Deploy to EC2 on master branch push
