@@ -42,7 +42,7 @@ jobs:
       with:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
-        KEY: ${{ secrets.OMG_SECRET }}
+        password: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
 
 
