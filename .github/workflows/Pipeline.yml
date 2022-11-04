@@ -36,6 +36,10 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+
+    - name: ls 
+      run: |
+        ls
     
     - name: Deploy Server
       uses: appleboy/ssh-action@master
@@ -45,9 +49,8 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
         SCRIPT: |
-          cd IntegracionContinua
+          cd IntegracionContinua/
           git pull origin main
-          git status
 
 
   # deploy:
