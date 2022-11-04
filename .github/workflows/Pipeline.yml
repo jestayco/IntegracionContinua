@@ -46,7 +46,7 @@ jobs:
         PORT: ${{ secrets.PORT }}
         SCRIPT: |
           cd IntegracionContinua
-          git pull
+          git pull origin main
           git status
 
 
