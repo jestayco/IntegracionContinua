@@ -49,6 +49,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
         SCRIPT: |
+          whoami
           ls
 
 #Hola
