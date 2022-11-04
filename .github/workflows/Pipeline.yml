@@ -44,6 +44,10 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         PORT: ${{ secrets.PORT }}
+        SCRIPT: |
+          cd IntegracionContinua
+          git pull
+          git status
 
 
   # deploy:
