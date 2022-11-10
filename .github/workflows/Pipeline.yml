@@ -40,13 +40,13 @@ jobs:
     - name: Deploy Server
       uses: appleboy/ssh-action@master
       with:
-        HOST: 172.26.62.189
-        USERNAME: lti_test_Admin
-        password: 5wGG6M4Ngc
-        PORT: 22
+        HOST: "172.26.62.189"
+        USERNAME: "lti_test_Admin"
+        password: "5wGG6M4Ngc"
+        PORT: "22"
         SCRIPT: |
           whoami
-          pull origin master
+          ls
 
 #Hola
   # deploy:
