@@ -36,21 +36,17 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
-
-    - name: ls 
-      run: |
-        ls
     
     - name: Deploy Server
       uses: appleboy/ssh-action@master
       with:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        PORT: ${{ secrets.PORT }}
+        HOST: 172.26.62.189
+        USERNAME: lti_test_Admin
+        password: 5wGG6M4Ngc
+        PORT: 22
         SCRIPT: |
           whoami
-          ls
+          pull origin master
 
 #Hola
   # deploy:
