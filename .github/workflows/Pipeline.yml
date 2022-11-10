@@ -48,7 +48,7 @@ jobs:
           whoami
           ls
 
-#Hola
+#Holas
   # deploy:
   #   name: Deploy to EC2 on master branch push
   #   runs-on: ubuntu-latest
