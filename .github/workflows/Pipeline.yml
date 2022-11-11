@@ -34,6 +34,14 @@ jobs:
         cd vpn
         sudo wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
         ls
+        sudo apt-get update
+        echo "Install Expect"
+        sudo apt-get install expect
+        echo "Install PPP"
+        sudo apt-get install ppp expect
+        echo "Install FortiClient"
+        sudo dpkg -x forticlient-sslvpn_4.4.2333-1_amd64.deb /home/$IntegracionContinua/vpn
+        ls
 
 
     # - name: Lint con flake8
