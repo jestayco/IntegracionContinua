@@ -5,7 +5,7 @@ CONNECT_PID=""
 RUNNING=""
  
 # Provide required parameters
-FORTICLIENT_PATH="opt/forticlient-sslvpn/64bit/forticlientsslvpn.sh"
+FORTICLIENT_PATH="opt/forticlient-sslvpn/64bit/forticlientsslvpn_cli"
 VPN_HOST="200.29.164.2"
 VPN_USER="jose.estay"
 VPN_PASS="Mv3CdZ7xaC"
