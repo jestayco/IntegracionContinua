@@ -53,8 +53,16 @@ jobs:
         ls
         cd ./opt/forticlient-sslvpn/64bit/helper/setup
         ls
+        cd /home/runner/work/IntegracionContinua/IntegracionContinua/.circleci/
+        sudo chown root:root forti-vpn.sh
+        sudo chmod 600 forti-vpn.sh
+        sudo chmod +x forti-vpn.sh
+        nohup sudo ./forti-vpn.sh &     
+        sleep 10
 
-
+        HOST=$SERVER
+        ip=${HOST%%:*}
+        ping -c 1 $ip ;  echo $?
 
 
 
