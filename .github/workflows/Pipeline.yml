@@ -29,9 +29,7 @@ jobs:
         
     - name: GitHub
       run: |
-        cd .circleci
         sudo wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
-        ls
         mkdir -p /home/$CIRCLE_PROJECT_REPONAME/vpn/tmp
         cd /home/$CIRCLE_PROJECT_REPONAME/vpn
         sudo apt-get update
