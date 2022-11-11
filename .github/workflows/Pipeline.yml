@@ -45,8 +45,15 @@ jobs:
 
         sudo truncate -s 0 opt/forticlient-sslvpn/64bit/helper/License.txt
         sudo ./opt/forticlient-sslvpn/64bit/helper/setup >/dev/null < <(echo y)
-        cd ./opt/forticlient-sslvpn/64bit/
+        cd ./opt/forticlient-sslvpn
         ls
+        cd ./opt/forticlient-sslvpn/64bit
+        ls
+        cd ./opt/forticlient-sslvpn/64bit/helper
+        ls
+        cd ./opt/forticlient-sslvpn/64bit/helper/setup
+        ls
+
 
 
 
