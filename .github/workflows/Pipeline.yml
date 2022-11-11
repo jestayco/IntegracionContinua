@@ -31,8 +31,8 @@ jobs:
       run: |
         sudo wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
         pwd
-        mkdir -p /home/$CIRCLE_PROJECT_REPONAME/vpn/tmp
-        cd /home/$CIRCLE_PROJECT_REPONAME/vpn
+        mkdir -p /home/runner/work/IntegracionContinua/IntegracionContinua/vpn/tmp
+        cd /home/runner/work/IntegracionContinua/IntegracionContinua/vpn
         sudo apt-get update
         echo "Install Expect"
         sudo apt-get install expect
@@ -41,7 +41,7 @@ jobs:
         echo "Install FortiClient"
 
         sudo cp  ~/.circleci/forticlient-sslvpn_4.4.2333-1_amd64.deb .
-        sudo dpkg -x forticlient-sslvpn_4.4.2333-1_amd64.deb /home/$CIRCLE_PROJECT_REPONAME/vpn
+        sudo dpkg -x forticlient-sslvpn_4.4.2333-1_amd64.deb /home/runner/work/IntegracionContinua/IntegracionContinua/vpn
 
         sudo truncate -s 0 opt/forticlient-sslvpn/64bit/helper/License.txt
         sudo ./opt/forticlient-sslvpn/64bit/helper/setup >/dev/null < <(echo y)
