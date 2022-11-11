@@ -29,25 +29,21 @@ jobs:
         
     - name: GitHub
       run: |
-        ls
-        mkdir vpn
-        cd vpn
+        cd .circleci
         sudo wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
         ls
+        mkdir -p /home/$CIRCLE_PROJECT_REPONAME/vpn/tmp
+        cd /home/$CIRCLE_PROJECT_REPONAME/vpn
         sudo apt-get update
         echo "Install Expect"
         sudo apt-get install expect
         echo "Install PPP"
         sudo apt-get install ppp expect
         echo "Install FortiClient"
-        ls
-        cd ..
-        cd ..
-        ls
-        cd ..
-        ls
-        sudo dpkg -x forticlient-sslvpn_4.4.2333-1_amd64.deb /home/IntegracionContinua/IntegracionContinua/vpn
-        ls
+
+        sudo cp  ~/.circleci/forticlient-sslvpn_4.4.2333-1_amd64.deb .
+        sudo dpkg -x forticlient-sslvpn_4.4.2333-1_amd64.deb /home/$CIRCLE_PROJECT_REPONAME/vpn
+
         sudo truncate -s 0 opt/forticlient-sslvpn/64bit/helper/License.txt
         sudo ./opt/forticlient-sslvpn/64bit/helper/setup >/dev/null < <(echo y)
 
