@@ -49,11 +49,11 @@ function connect {
     #IMPORTANT!: the "EOF" just above must be preceded by a TAB character (not spaces)
  
     # lock down and execute expect script
-    chmod 500 /tmp/expect
-    /usr/bin/expect -f /tmp/expect
+    # chmod 500 /tmp/expect
+    # /usr/bin/expect -f /tmp/expect
  
-    # when expect script is finished (closes) clean up
-    rm -f /tmp/expect
+    # # when expect script is finished (closes) clean up
+    # rm -f /tmp/expect
 }
  
 startConnect

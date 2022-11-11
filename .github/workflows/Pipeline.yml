@@ -47,18 +47,10 @@ jobs:
         sudo ./opt/forticlient-sslvpn/64bit/helper/setup >/dev/null < <(echo y)
 
         cd /home/runner/work/IntegracionContinua/IntegracionContinua/.circleci/
+        cd tmp/
         ls
-        sudo chown root:root forti-vpn.sh
-        sudo chmod 600 forti-vpn.sh
-        sudo chmod +x forti-vpn.sh
-        nohup sudo ./forti-vpn.sh &     
-        sleep 10
-
-        HOST=$SERVER
-        ip=${HOST%%:*}
-        ping -c 1 $ip ;  echo $?
-
-
+        cd tmp/expect
+        ls
 
 
     # - name: Lint con flake8
