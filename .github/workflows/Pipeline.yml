@@ -30,6 +30,11 @@ jobs:
     - name: GitHub
       run: |
         ls
+        mkdir vpn
+        cd vpn
+        sudo wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
+        ls
+
 
     # - name: Lint con flake8
     #   run: |
