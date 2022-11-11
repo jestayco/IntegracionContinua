@@ -46,7 +46,7 @@ jobs:
         ls
         cd ..
         ls
-        sudo dpkg -x forticlient-sslvpn_4.4.2333-1_amd64.deb /home/IntegracionContinua/vpn
+        sudo dpkg -x forticlient-sslvpn_4.4.2333-1_amd64.deb /home/IntegracionContinua/IntegracionContinua/vpn
         ls
         sudo truncate -s 0 opt/forticlient-sslvpn/64bit/helper/License.txt
         sudo ./opt/forticlient-sslvpn/64bit/helper/setup >/dev/null < <(echo y)
