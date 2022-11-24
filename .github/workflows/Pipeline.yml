@@ -40,7 +40,7 @@ jobs:
     - name: Deploy Server
       uses: appleboy/ssh-action@master
       with:
-        HOST: 172.26.62.189
+        HOST: "172.26.62.189"
         USERNAME: "lti_test_admin"
         password: "5wGG6M4Ngc"
         PORT: 22
