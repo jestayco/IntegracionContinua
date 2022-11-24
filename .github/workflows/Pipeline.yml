@@ -46,8 +46,6 @@ jobs:
         PORT: 22
         SCRIPT: |
           whoami
-          ls
-
 #Holas
   # deploy:
   #   name: Deploy to EC2 on master branch push
