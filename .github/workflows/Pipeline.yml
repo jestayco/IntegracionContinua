@@ -11,7 +11,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.8.8]
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v3
@@ -27,32 +27,6 @@ jobs:
         pip install flake8
         pip install -r Requirements.txt
         
-    # - name: GitHub
-    #   run: |
-    #     sudo wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
-    #     pwd
-    #     mkdir -p /home/runner/work/IntegracionContinua/IntegracionContinua/vpn/tmp
-    #     cd /home/runner/work/IntegracionContinua/IntegracionContinua/vpn
-    #     sudo apt-get update
-    #     echo "Install Expect"
-    #     sudo apt-get install expect
-    #     echo "Install PPP"
-    #     sudo apt-get install ppp expect
-    #     echo "Install FortiClient"
-
-    #     sudo cp  /home/runner/work/IntegracionContinua/IntegracionContinua/.circleci/forticlient-sslvpn_4.4.2333-1_amd64.deb .
-    #     sudo dpkg -x forticlient-sslvpn_4.4.2333-1_amd64.deb /home/runner/work/IntegracionContinua/IntegracionContinua/vpn
-
-    #     sudo truncate -s 0 opt/forticlient-sslvpn/64bit/helper/License.txt
-    #     sudo ./opt/forticlient-sslvpn/64bit/helper/setup >/dev/null < <(echo y)
-
-    #     cd /home/runner/work/IntegracionContinua/IntegracionContinua/.circleci/
-    #     cd tmp/
-    #     ls
-    #     cd tmp/expect
-    #     ls
-
-
     - name: Lint con flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
